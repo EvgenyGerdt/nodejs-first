@@ -1,13 +1,59 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+@import "fonts.css";
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: "YandexSansLight";
+    text-align: center;
+}
+.background_block {
+    position: absolute;
+    background: url("img/mainbg.jpg") no-repeat;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.auth_h {
+    font-family: "YandexSansMedium";
+}
+
+.auth_h:first-letter {
+    color: #ff0000;
+}
+
+button {
+    border: 1px;
+    border-color: black!important;
+}
+
+input.validate {
+    border-bottom: 1px solid  black!important;
+    box-shadow: 0 1px 0 0 #fff!important;
+}
+
+input.validate + label {
+    color: black!important;
+}
+
+input.validate:focus {
+    border-bottom: 1px solid #ffdc4c!important;
+}
+
+#email_input-field {
+    margin-top: 5em;
+}
+
+.auth_h, .auth_p {
+    text-align: left!important;
+}
+
+.card-content {
+    text-align: center;
+    margin-top: 15em;
+}
+
+#card-btn {
+    margin-top: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }

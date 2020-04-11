@@ -36,7 +36,7 @@ router.post(
 		}
 
 		const hashedPassword = await bcrypt.hash(password, 12)
-		const user = new User({ email, password: hashedPassword, firstName, lastName, date })
+		const user = new User({ email, password: hashedPassword })
 
 		user.save()
 
@@ -48,7 +48,7 @@ router.post(
 })
 
 // /api/auth/login
-router.post(
+router.get(
 	'/login',
 	[
 		check('email', 'Input correct email').normalizeEmail().isEmail(),
