@@ -81,8 +81,11 @@ router.post(
 
 		const token = jwt.sign(
 			{userId: user.id},
-			config.get('JWT_SECRET')
+			config.get('JWT_SECRET'),
+			{ expiresIn: '1h' }
 		)
+
+		res.json({token, userId: user.id})
 
   } catch (e) {
     res.status(500).json({ message: "Server error, try again" })
